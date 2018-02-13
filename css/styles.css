@@ -4,10 +4,79 @@
  * information for anyone trying to read the file: notes, hints, etc. One very valuable
  * piece of information is who to talk to about this file if you have questions! Hence:
  *
- * Author: (your name here)
+ * Author: Paul Mazaitis
 */
 
 /* This is a CSS Comment; note the comment syntax is different from what we use to mark up comments in HTML! */
 
 /* Page styles after this comment */
 
+
+/**** Importing Fonts 
+
+Importing two fonts, Avro and Cabin. 
+
+I'm bringing in the bold (700) weight of Arvo, and giving myself the flexibilitiy of Cabin in both roman and italic. I set this up with the "CUSTOMIZE" tab in google fonts.
+
+Google Fonts reports that using these three fonts will make my font load time "moderate" - I probably don't want any more than this. 
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Arvo:700|Cabin:400,400i');
+
+/**** A note on format: brace styles
+
+For this css file, I'm going to be using this brace style:
+
+  selector {
+    property: value;
+    property: value;
+  }
+
+...because that makes the code formatter happy. It's also 
+reasonable to use this brace style:
+
+  selector 
+  {
+    property: value;
+    property: value;
+  }
+
+I would avoid doing things like this:
+
+  selector {property: value; property: value;}
+
+It's more compact, but makes editing harder.
+
+The real take away: be consistant! There will often be style 
+guides if you're working with a group; use them!
+
+*/
+
+/* Set up body font */
+body {
+  /* Let's use Cabin, with fallbacks */
+  font-family: Cabin, Arial, Helvetica, sans-serif;
+  /* Let the text breathe a bit */
+  line-height: 1.4;
+}
+
+/* Set up the section headings */
+h1,
+h2,
+h3 {
+  font-family: Arvo, Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  /* Bretty heavy weight, so I back off the text color here */
+  color: grey;
+}
+
+/* Let's make the links only show underline on hover */
+a {
+  color: firebrick;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+
+  
