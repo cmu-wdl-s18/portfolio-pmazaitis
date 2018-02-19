@@ -11,7 +11,6 @@
 
 /* Page styles after this comment */
 
-
 /**** Importing Fonts 
 
 Importing two fonts, Avro and Cabin. 
@@ -23,6 +22,7 @@ Google Fonts reports that using these three fonts will make my font load time "m
 */
 
 @import url('https://fonts.googleapis.com/css?family=Arvo:700|Cabin:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Pen+Script');
 
 /**** A note on format: brace styles
 
@@ -54,6 +54,7 @@ guides if you're working with a group; use them!
 */
 
 /* Set up body font */
+
 body {
   /* Let's use Cabin, with fallbacks */
   font-family: Cabin, Arial, Helvetica, sans-serif;
@@ -62,9 +63,10 @@ body {
 }
 
 /* Set up the section headings */
-h1,
-h2,
-h3 {
+
+main h1,
+main h2,
+main h3 {
   font-family: Arvo, Arial, Helvetica, sans-serif;
   font-weight: 700;
   /* Bretty heavy weight, so I back off the text color here */
@@ -72,11 +74,63 @@ h3 {
 }
 
 /* Let's make the links only show underline on hover */
+
 a {
   color: firebrick;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
+}
 
-  
+/* Make main thinner to improve line width, and center it using the margin auto trick */
+
+main {
+  max-width: 700px;
+  margin: 0px  auto;
+}
+
+/* Redice the size of the image a bit, and center it with the same trick */
+
+main img {
+  display: block; /* if we don't do this, the margin trick doesn't work */
+  width: 200px;
+  margin: 20px  auto;
+}
+
+header div {
+  background-color: blue;
+  width: 300px;
+  height: 160px;
+  border-radius: 20px;
+  margin: 50px auto;
+  transform: rotate(-7deg);
+}
+
+header h1 {
+  color: white;
+  font-size: 450%;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+header h2 {
+  font-family: 'Nanum Pen Script', cursive;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  width: 260px;
+  font-size: 200%;
+  margin: 0px auto 0px auto;
+}
+
+footer {
+  background-color: blue;
+  color: white;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 700px;
+  margin: 50px auto 0px  auto;
+}
