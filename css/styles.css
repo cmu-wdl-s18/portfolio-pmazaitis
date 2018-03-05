@@ -69,9 +69,18 @@ main h2,
 main h3 {
   font-family: Arvo, Arial, Helvetica, sans-serif;
   font-weight: 700;
-  /* Bretty heavy weight, so I back off the text color here */
+  /* Pretty heavy weight, so I back off the text color here */
   color: grey;
 }
+
+main h2 {
+  font-size: 120%; /* Let's at some typographical hierarchy back into the mix */
+}
+
+main h3 {
+  font-size: 100%;
+}
+
 
 /* Let's make the links only show underline on hover */
 
@@ -102,7 +111,7 @@ main img {
 header div {
   background-color: blue;
   width: 300px;
-  height: 160px;
+  height: 200px;
   border-radius: 20px;
   margin: 50px auto;
   transform: rotate(-7deg);
@@ -125,6 +134,13 @@ footer {
   font-size: 450%;
   text-align: center;
   margin-bottom: 0px;
+}
+
+/* Added the following to fine-tune the sticker header; no realy semantic way to do this, so classes it is */
+.hello .my_name {
+  color: white;
+  margin-top: 0px;
+  text-align: center;
 }
 
 .hello h2 {
@@ -153,4 +169,43 @@ footer {
 
 .contact_main {
   overflow: auto;
+}
+
+/* Containers that act as reference points for the mongering icons within them. */
+.mongered_thing {
+  position: relative;
+}
+
+/* We want all the mongering icons to behave identically, so we can use one class for them. */
+.mongered_thing_icon {
+  width: 50px;
+  position: absolute;
+  left: -70px;
+  top: -25px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* The neat thing here is that this only applies when the pointer is over a particular container, so the effect follows the mouse. */
+.mongered_thing:hover .mongered_thing_icon {
+  background-color: lightgray;
+}
+
+.section_zipline {
+  position: relative;
+}
+
+#zipline_img {
+    position: absolute;
+  left: -70px;
+  top: 0px;
+}
+
+/* Same trick as above, but this time we change the fill color of the svg, not the background of the image. */
+#zipline_guy {
+  fill: #000000;
+}
+
+.section_zipline:hover #zipline_guy {
+  fill: #FF0000;
 }
